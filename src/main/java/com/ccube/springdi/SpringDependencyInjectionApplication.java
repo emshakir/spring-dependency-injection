@@ -25,6 +25,12 @@ public class SpringDependencyInjectionApplication {
         WithPrimaryForDefaultLoad withPrimaryForDefaultLoad = (WithPrimaryForDefaultLoad) context.getBean("withPrimaryForDefaultLoad");
         System.out.println(withPrimaryForDefaultLoad.getGreetings());
 
+        I18NController i18nController = (I18NController) context.getBean("i18NController");
+        System.out.println(i18nController.getGreetings());
+
+        PetController petController = (PetController) context.getBean("petController");
+        System.out.println(petController.getPetType());
+
 
     }
 
